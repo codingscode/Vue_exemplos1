@@ -9,6 +9,13 @@ terminal
 
 
 
+pasta pomodoro-app:
+    npm run serve
+
+
+
+
+
 
 
 
