@@ -3,6 +3,7 @@ pasta 001:
 terminal
     npm install -g @vue/cli
     vue create pomodoro-app
+    vue add vuetify
 
 
 
