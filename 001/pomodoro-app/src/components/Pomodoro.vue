@@ -1,5 +1,5 @@
 <template>
-   <v-card>
+   <v-card class="mt-8" >
        <v-tabs v-model="timerType" >
           <v-tab v-for="tab in tabsTitles" :key="tab" >
               {{ tab }}
@@ -18,6 +18,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped >
+   /* v-card
+      width: 600px; */
 
+   
 </style>
