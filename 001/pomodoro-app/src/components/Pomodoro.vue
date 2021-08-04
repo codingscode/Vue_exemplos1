@@ -1,6 +1,6 @@
 <template>
    <v-card class="mt-8" >
-       <v-tabs v-model="timerType" >
+       <v-tabs v-model="timerType" grow >
           <v-tab v-for="tab in tabsTitles" :key="tab" >
               {{ tab }}
           </v-tab>
@@ -8,9 +8,19 @@
             <v-tab-item  >
                 <v-card color="basil" class="pa-5" flat>
                     <h1 class="time" >00:00</h1>
-                    <v-btn color="primary" >Iniciar</v-btn>
-                    <v-btn>Parar</v-btn>
-                    <v-btn>Reset</v-btn>
+                    <v-btn color="primary" >
+                        <v-icon left small>mdi-play-circle-outline</v-icon>
+                        Iniciar
+                    </v-btn>
+                    <v-btn color="error" >
+                        <v-icon left small>mdi-stop-circle-outline</v-icon>
+                        Parar
+                    </v-btn>
+                    <v-btn>
+                        <v-icon left small>mdi-restart</v-icon>
+                        Reset
+                        
+                    </v-btn>
                 </v-card>
             </v-tab-item>
           </v-tabs-items>
