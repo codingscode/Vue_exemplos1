@@ -16,6 +16,9 @@ pasta pomodoro-app:
 https://vuetifyjs.com/en/
 
 
+colocando o 25:00 inicial
+
+
 
 
 
