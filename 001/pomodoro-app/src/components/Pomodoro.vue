@@ -9,11 +9,11 @@
                 <v-card color="basil" class="pa-5 d-flex flex-column justify-center align-center" flat>
                     <h1 class="time" >{{mostrarMinutos}}:{{mostrarSegundos}}</h1>
                     <div class="button-group" >
-                        <v-btn color="primary" >
+                        <v-btn color="primary" @click="iniciar" >
                             <v-icon left small>mdi-play-circle-outline</v-icon>
                             Iniciar
                         </v-btn>
-                        <v-btn color="error" >
+                        <v-btn color="error" @click="parar" >
                             <v-icon left small>mdi-stop-circle-outline</v-icon>
                             Parar
                         </v-btn>
@@ -33,9 +33,7 @@
 export default {
     data() {
         return {
-           mostrar: {
-              minutos: '00', segundos: '00',
-           },
+            timerInstance: null,
            totalSegundos: 25*60,
            timerType: 0, tabsTitles: ['Pomodoro', 'Short Break', 'Long Break']
         }
@@ -56,8 +54,20 @@ export default {
               return '0' + time
            }
            return time.toString()
-        }
+        },
+        iniciar() {
+            this.timerInstance = setInterval(() => {
+                this.totalSegundos -= 1
+            }, 1000)
+        },
+        parar() {
+           clearInterval(this.timerInstance)
 
+        },
+        resetar() {
+            this.stop()
+            this.totalSegundos = 25*60
+        }
     }
     
 }
