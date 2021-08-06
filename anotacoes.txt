@@ -19,6 +19,8 @@ https://vuetifyjs.com/en/
 colocando o 25:00 inicial
 
 testando botoes iniciar, parar, reset
+organizando
+
 
 
 

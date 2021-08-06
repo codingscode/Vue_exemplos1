@@ -17,7 +17,7 @@
                             <v-icon left small>mdi-stop-circle-outline</v-icon>
                             Parar
                         </v-btn>
-                        <v-btn>
+                        <v-btn @click="resetar" >
                             <v-icon left small>mdi-restart</v-icon>
                             Reset
                         </v-btn>
@@ -56,6 +56,7 @@ export default {
            return time.toString()
         },
         iniciar() {
+            this.parar()
             this.timerInstance = setInterval(() => {
                 this.totalSegundos -= 1
             }, 1000)
@@ -65,7 +66,7 @@ export default {
 
         },
         resetar() {
-            this.stop()
+            this.parar()
             this.totalSegundos = 25*60
         }
     }
