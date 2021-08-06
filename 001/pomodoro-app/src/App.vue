@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-content>
+    <v-main>
       <v-container>
         <v-row>
            <v-col sm="6" offset-sm="3">
@@ -10,7 +10,7 @@
         </v-row>
 
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
