@@ -21,7 +21,7 @@ colocando o 25:00 inicial
 testando botoes iniciar, parar, reset
 organizando
 
-
+clicar nas abas e ver console
 
 
 
