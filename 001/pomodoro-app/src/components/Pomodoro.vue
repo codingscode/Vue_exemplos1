@@ -4,28 +4,25 @@
           <v-tab v-for="cronometro in cronometros" :key="cronometro.nome" >
               {{ cronometro.nome }}
           </v-tab>
-          <v-tabs-items v-model="timerAtual">
-            <v-tab-item  >
-                <v-card color="basil" class="pa-5 d-flex flex-column justify-center align-center" flat>
-                    <h1 class="time" >{{mostrarMinutos}}:{{mostrarSegundos}}</h1>
-                    <div class="button-group" >
-                        <v-btn color="primary" @click="iniciar" >
-                            <v-icon left small>mdi-play-circle-outline</v-icon>
-                            Iniciar
-                        </v-btn>
-                        <v-btn color="error" @click="parar" >
-                            <v-icon left small>mdi-stop-circle-outline</v-icon>
-                            Parar
-                        </v-btn>
-                        <v-btn @click="resetar" :disabled="estaExecutando" >
-                            <v-icon left small>mdi-restart</v-icon>
-                            Reset
-                        </v-btn>
-                    </div>
-                </v-card>
-            </v-tab-item>
-          </v-tabs-items>
+
        </v-tabs>
+       <v-card color="basil" class="pa-5 d-flex flex-column justify-center align-center" flat>
+           <h1 class="time" >{{mostrarMinutos}}:{{mostrarSegundos}}</h1>
+           <div class="button-group" >
+               <v-btn color="primary" @click="iniciar" >
+                   <v-icon left small>mdi-play-circle-outline</v-icon>
+                   Iniciar
+               </v-btn>
+               <v-btn color="error" @click="parar" >
+                   <v-icon left small>mdi-stop-circle-outline</v-icon>
+                   Parar
+               </v-btn>
+               <v-btn @click="resetar" :disabled="estaExecutando" >
+                   <v-icon left small>mdi-restart</v-icon>
+                   Reset
+               </v-btn>
+           </div>
+       </v-card>
    </v-card>
 </template>
 
