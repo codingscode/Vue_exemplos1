@@ -6,6 +6,7 @@
           </v-tab>
 
        </v-tabs>
+
        <v-card color="basil" class="pa-5 d-flex flex-column justify-center align-center" flat>
            <h1 class="time" >{{mostrarMinutos}}:{{mostrarSegundos}}</h1>
            <div class="button-group" >
@@ -17,7 +18,7 @@
                    <v-icon left small>mdi-stop-circle-outline</v-icon>
                    Parar
                </v-btn>
-               <v-btn @click="resetar" :disabled="estaExecutando" >
+               <v-btn @click="resetar(this.cronometros[num].minutos)" :disabled="estaExecutando" >
                    <v-icon left small>mdi-restart</v-icon>
                    Reset
                </v-btn>
@@ -70,12 +71,14 @@ export default {
             clearInterval(this.timerInstance)
 
         },
-        resetar() {
+        resetar(minutos) {
             this.parar()
-            this.totalSegundos = 25*60
+            this.totalSegundos = minutos*60
         },
         alterarTimerType(num) {
             console.log(num)
+            this.timerAtual = num
+            this.resetar(this.cronometros[num].minutos)
         }
     }
     
