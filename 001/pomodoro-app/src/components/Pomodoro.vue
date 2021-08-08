@@ -63,8 +63,12 @@ export default {
             this.parar()
             this.estaExecutando = true
             this.timerInstance = setInterval(() => {
+                if (this.totalSegundos <= 0) {
+                   this.parar()
+                   return
+                }
                 this.totalSegundos -= 1
-            }, 1000)
+            }, 5)
         },
         parar() {
             this.estaExecutando = false
