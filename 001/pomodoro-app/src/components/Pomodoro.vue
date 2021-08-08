@@ -24,11 +24,20 @@
                </v-btn>
            </div>
        </v-card>
+       <DialogC :dialog="dialog" />
+       <v-btn color="blue" dark small absolute bottom left fab >
+          <v-icon>mdi-cog-outline</v-icon>
+       </v-btn>
    </v-card>
 </template>
 
 <script>
+import DialogC from './DialogC.vue'
+
 export default {
+    components: {
+        DialogC
+    },
     data() {
         return {
            estaExecutando: false, 
@@ -39,7 +48,8 @@ export default {
                {nome: 'Pomodoro', minutos: 25},
                {nome: 'Curto', minutos: 5},
                {nome: 'Longo', minutos: 10}
-            ]
+            ],
+            dialog: false
         }
     },
     computed: {
@@ -68,7 +78,7 @@ export default {
                    return
                 }
                 this.totalSegundos -= 1
-            }, 5)
+            }, 1000)
         },
         parar() {
             this.estaExecutando = false
