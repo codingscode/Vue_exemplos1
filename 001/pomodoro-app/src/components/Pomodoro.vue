@@ -18,7 +18,7 @@
                    <v-icon left small>mdi-stop-circle-outline</v-icon>
                    Parar
                </v-btn>
-               <v-btn @click="resetar(this.cronometros[num].minutos)" :disabled="estaExecutando" >
+               <v-btn @click="resetar(cronometros[timerAtual].minutos)" :disabled="estaExecutando" >
                    <v-icon left small>mdi-restart</v-icon>
                    Reset
                </v-btn>
