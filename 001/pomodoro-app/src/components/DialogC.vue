@@ -5,7 +5,7 @@
           Eu sou um dialog
          <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" text @click="dialog = false" >
+            <v-btn color="blue darken-1" text @click="fecharDialog" >
               Fechar
             </v-btn>
             <v-btn color="blue darken-1" text @click="dialog = false" >
@@ -22,6 +22,9 @@ export default {
    props: {
       dialog: {
          type: Boolean, required: true
+      },
+      fecharDialog: {
+         type: Function, required: true
       }
    }
 }

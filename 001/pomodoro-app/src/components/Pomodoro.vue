@@ -24,7 +24,7 @@
                </v-btn>
            </div>
        </v-card>
-       <DialogC :dialog="dialog" />
+       <DialogC :dialog="dialog" :fecharDialog="fecharDialog" />
        
    </v-card>
 </template>
@@ -39,6 +39,9 @@ export default {
     props: {
        dialog: {
           type: Boolean, required: true
+       },
+       fecharDialog: {
+          type: Function, required: true
        }
     },
     data() {
