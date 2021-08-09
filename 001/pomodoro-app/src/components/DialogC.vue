@@ -8,7 +8,7 @@
             <v-btn color="blue darken-1" text @click="fecharDialog" >
               Fechar
             </v-btn>
-            <v-btn color="blue darken-1" text @click="dialog = false" >
+            <v-btn color="blue darken-1" text @click="salvar" >
               Salvar
             </v-btn>
          </v-card-actions>
@@ -25,8 +25,12 @@ export default {
       },
       fecharDialog: {
          type: Function, required: true
+      },
+      salvar: {
+         type: Function, required: true
       }
-   }
+   },
+
 }
 </script>
 

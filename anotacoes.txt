@@ -37,6 +37,8 @@ clicar na engrenagem
 ajeitar
 
 em dialog "fechar" ok, "salvar" não
+ok agora
+
 
 
 

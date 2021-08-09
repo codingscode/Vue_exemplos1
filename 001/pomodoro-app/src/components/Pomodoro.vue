@@ -24,7 +24,7 @@
                </v-btn>
            </div>
        </v-card>
-       <DialogC :dialog="dialog" :fecharDialog="fecharDialog" />
+       <DialogC :dialog="dialog" :fecharDialog="fecharDialog" :salvar="salvar" />
        
    </v-card>
 </template>
@@ -99,6 +99,9 @@ export default {
             console.log(num)
             this.timerAtual = num
             this.resetar(this.cronometros[num].minutos)
+        },
+        salvar() {
+            this.fecharDialog()
         }
     }
     
