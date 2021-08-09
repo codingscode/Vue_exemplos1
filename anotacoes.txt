@@ -30,8 +30,11 @@ evitando que o tempo fique negativo
 
 
 https://vuetifyjs.com/en/components/dialogs/#form
+https://vuetifyjs.com/en/components/dialogs/#dialogs
 
 clicar na engrenagem
+
+ajeitar
 
 
 
