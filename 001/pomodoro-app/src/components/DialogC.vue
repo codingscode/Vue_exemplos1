@@ -12,7 +12,7 @@
 export default {
    props: {
       dialog: {
-         type: Boolean, require: true
+         type: Boolean, required: true
       }
    }
 }

@@ -25,9 +25,7 @@
            </div>
        </v-card>
        <DialogC :dialog="dialog" />
-       <v-btn color="blue" dark small absolute bottom left fab >
-          <v-icon>mdi-cog-outline</v-icon>
-       </v-btn>
+       
    </v-card>
 </template>
 
@@ -37,6 +35,11 @@ import DialogC from './DialogC.vue'
 export default {
     components: {
         DialogC
+    },
+    props: {
+       dialog: {
+          type: Boolean, required: true
+       }
     },
     data() {
         return {
@@ -48,8 +51,8 @@ export default {
                {nome: 'Pomodoro', minutos: 25},
                {nome: 'Curto', minutos: 5},
                {nome: 'Longo', minutos: 10}
-            ],
-            dialog: false
+            ]
+            
         }
     },
     computed: {
