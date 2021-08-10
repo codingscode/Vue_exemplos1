@@ -100,7 +100,10 @@ export default {
             this.timerAtual = num
             this.resetar(this.cronometros[num].minutos)
         },
-        salvar() {
+        salvar(cronometrosAtualizados) {
+            this.cronometros = this.cronometros.map((cada, i) => {
+               return {...cada, minutos: parseInt(cronometrosAtualizados[i])}
+            })
             this.fecharDialog()
         }
     }

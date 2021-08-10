@@ -6,14 +6,14 @@
             <span class="headline">Configurações</span>
          </v-card-title>
          <v-card-text>
-            <v-text-field v-for="(crono, i) in cronometrosAtualizados" :key="i" label="Pomodoro" v-model="cronometrosAtualizados[i]" />
+            <v-text-field v-for="(crono, i) in cronometrosAtualizados" :key="i" label="Pomodoro" v-model="cronometrosAtualizados[i]" type="number" />
          </v-card-text>
          <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" text @click="fecharDialog" >
               Fechar
             </v-btn>
-            <v-btn color="blue darken-1" text @click="salvar" >
+            <v-btn color="blue darken-1" text @click="salvar(cronometrosAtualizados)" >
               Salvar
             </v-btn>
          </v-card-actions>

@@ -40,7 +40,8 @@ em dialog "fechar" ok, "salvar" não
 ok agora
 
 
-
+no comitt anterior aparece uma caixa com os 3 tempos
+os 3 tempos agora podem ser modificados
 
 
 
