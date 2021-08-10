@@ -2,7 +2,12 @@
    
     <v-dialog v-model="dialog" persistent max-width="600px" >
        <v-card>
-          Eu sou um dialog
+         <v-card-title>
+            <span class="headline">Configurações</span>
+         </v-card-title>
+         <v-card-text>
+            <v-text-field v-for="(crono, i) in cronometrosAtualizados" :key="i" label="Pomodoro" v-model="cronometrosAtualizados[i]" />
+         </v-card-text>
          <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" text @click="fecharDialog" >
@@ -28,8 +33,21 @@ export default {
       },
       salvar: {
          type: Function, required: true
+      },
+      cronometros: {
+         type: Array, required: true
       }
    },
+   data() {
+      return {
+         cronometrosAtualizados: []
+      }
+   },
+   mounted() {
+      this.cronometrosAtualizados = this.cronometros.map((cada) => {
+         return cada.minutos
+      })
+   }
 
 }
 </script>

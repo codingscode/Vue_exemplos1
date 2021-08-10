@@ -24,7 +24,7 @@
                </v-btn>
            </div>
        </v-card>
-       <DialogC :dialog="dialog" :fecharDialog="fecharDialog" :salvar="salvar" />
+       <DialogC :cronometros="cronometros" :dialog="dialog" :fecharDialog="fecharDialog" :salvar="salvar" />
        
    </v-card>
 </template>
